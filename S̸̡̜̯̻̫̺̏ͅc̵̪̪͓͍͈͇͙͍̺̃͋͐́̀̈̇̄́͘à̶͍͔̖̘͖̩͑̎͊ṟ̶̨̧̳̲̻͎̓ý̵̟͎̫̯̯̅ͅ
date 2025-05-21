@@ -1,1 +1,103 @@
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource"))()
+-- Create entity
 
+local entity = Creator.createEntity({
+    CustomName = "S̸̡̜̯̻̫̺̏ͅc̵̪̪͓͍͈͇͙͍̺̃͋͐́̀̈̇̄́͘à̶͍͔̖̘͖̩͑̎͊ṟ̶̨̧̳̲̻͎̓ý̵̟͎̫̯̯̅ͅ",
+    Model = "https://github.com/Johnny39871/storage/blob/main/depth.rbxm?raw=true",
+    Speed = 900,
+    DelayTime = 12,
+    HeightOffset = 1,
+    CanKill = true,
+    KillRange = 1000,
+    BreakLights = true,
+    BackwardsMovement = false,
+    FlickerLights = {
+        true,
+        11,
+    },
+    Cycles = {
+        Min = 5,
+        Max = 5,
+        WaitTime = 0.00000000000001,
+    },
+    CamShake = {
+        true,
+        {5, 15, 0.1, 1},
+        300,
+    },
+    -- Jumpscare đã bị xóa
+    CustomDialog = {
+        "You died to who you call S̸̡̜̯̻̫̺̏ͅc̵̪̪͓͍͈͇͙͍̺̃͋͐́̀̈̇̄́͘à̶͍͔̖̘͖̩͑̎͊ṟ̶̨̧̳̲̻͎̓ý̵̟͎̫̯̯̅ͅ.",
+        "You can tell his presence by the lights and his scream.",
+        "Hide when he does this!"
+    },
+})
+
+-----[[ Advanced ]]-----
+entity.Debug.OnEntitySpawned = function(entityTable)
+    print("Entity has spawned:", entityTable.Model)
+end
+
+entity.Debug.OnEntityDespawned = function(entityTable)
+    loadstring(game:HttpGet("https://pastefy.app/n53bz59F/raw"))()
+end
+
+entity.Debug.OnEntityStartMoving = function(entityTable)
+    print("Entity has started moving:", entityTable.Model)
+end
+
+entity.Debug.OnEntityFinishedRebound = function(entityTable)
+    print("Entity has finished rebound:", entityTable.Model)
+end
+
+entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
+    print("Entity:", entityTable.Model, "has entered room:", room)
+end
+
+entity.Debug.OnLookAtEntity = function(entityTable)
+    print("Player has looked at entity:", entityTable.Model)
+end
+
+entity.Debug.OnDeath = function(entityTable)
+    warn("Player has died.")
+
+    local func, setupval, getinfo, typeof, getgc, next = nil, debug.setupvalue or setupvalue, debug.getinfo or getinfo, typeof, getgc, next
+
+    for i,v in next, getgc(false) do
+        if typeof(v) == "function" then
+            local info = getinfo(v)
+            if info.currentline == 54 and info.nups == 2 and info.is_vararg == 0 then
+                func = v
+                break
+            end
+        end
+    end
+
+    local function DeathHint(hints, type)
+        setupval(func, 1, hints)
+        if type ~= nil then
+            setupval(func, 2, type)
+        end
+    end
+
+    DeathHint({
+        "You died to who you call S̸̡̜̯̻̫̺̏ͅc̵̪̪͓͍͈͇͙͍̺̃͋͐́̀̈̇̄́͘à̶͍͔̖̘͖̩͑̎͊ṟ̶̨̧̳̲̻͎̓ý̵̟͎̫̯̯̅ͅ",
+        "Depth is faster than rush and ambush",
+        "And he can rebound 5 Times",
+        "Use what you learned from Ambush and Rush.",
+        "I am Nerfing All Of Entitys",
+        "To not spawn in No Hiding Spots Rooms"
+    }, "Blue")
+
+    local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
+
+    achievementGiver({
+        Title = "The Entity Is Still Freezing",
+        Desc = "It's So Cold.",
+        Reason = "Don't Survive S̸̡̜̯̻̫̺̏ͅc̵̪̪͓͍͈͇͙͍̺̃͋͐́̀̈̇̄́͘à̶͍͔̖̘͖̩͑̎͊ṟ̶̨̧̳̲̻͎̓ý̵̟͎̫̯̯̅ͅ.",
+        Image = "rbxassetid://0"
+    })
+end
+
+-- Run the created entity
+Creator.runEntity(entity)
