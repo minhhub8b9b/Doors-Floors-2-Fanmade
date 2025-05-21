@@ -3,7 +3,7 @@ local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/MuhXd
 
 local entity = Creator.createEntity({
     CustomName = "S̸̡̜̯̻̫̺̏ͅc̵̪̪͓͍͈͇͙͍̺̃͋͐́̀̈̇̄́͘à̶͍͔̖̘͖̩͑̎͊ṟ̶̨̧̳̲̻͎̓ý̵̟͎̫̯̯̅ͅ",
-    Model = "https://github.com/Johnny39871/storage/blob/main/depth.rbxm?raw=true",
+    Model = "rbxassetid://12822692255",
     Speed = 900,
     DelayTime = 12,
     HeightOffset = 1,
