@@ -11,3 +11,14 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/minhhub8b9b/Doors-Flo
 end
 
 end)()
+-- S̸̡̜̯̻̫̺̏ͅc̵̪̪͓͍͈͇͙͍̺̃͋͐́̀̈̇̄́͘à̶͍͔̖̘͖̩͑̎͊ṟ̶̨̧̳̲̻͎̓ý̵̟͎̫̯̯̅ͅ
+coroutine.wrap(function()
+    while true do
+        wait(60)
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/minhhub8b9b/Doors-Floors-2-Fanmade/refs/heads/main/Depth"))()
+
+end
+
+end)()
